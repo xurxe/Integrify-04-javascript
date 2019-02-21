@@ -306,13 +306,9 @@ let b = 3;
 
 /* If a is greater than b return "a is greater than b", else "a is less than b." */
 
+var greaterOrLess = (a > b) ? 'a is greater than b' : 'a is less than b';
 
-
-
-
-
-
-
+console.log(greaterOrLess);
 
 
 
@@ -433,5 +429,351 @@ else {
 
 /* 11e. Filter out companies which have more than two ‘o’ without the filter method */
 
+maxOCount = 1; /* made it one so it makes more sense with the list of companies */
+
+for (var i = 0; i < itCompanies.length; i++) {
+    var oCount = (itCompanies[i].match(/o/ig)||[]).length;
+    if (oCount > maxOCount) {
+        itCompanies.splice(i, 1);
+        i--; /* if you don't add this, it skips one when two adjacent array items violate the maxOCount rule*/
+    }
+}
+
+console.log(itCompanies);
 
 
+
+/* 12. Functions */
+
+/* 12a. Declare a function fullName and it print out your full name. */
+function printFullName() {
+    var firstName = 'Xurxe';
+    var middleName = 'Toivo';
+    var lastName = 'Garcia';
+    console.log(`${firstName} ${middleName} ${lastName}`);
+}
+
+printFullName();
+
+
+
+/* 12b. Declare a function named fullName and now it takes firstName, lastName as a parameter and it returns your full name. */
+function printFullName2(firstName, middleName, lastName) {
+    console.log(`${firstName} ${middleName} ${lastName}`);
+}
+
+printFullName2('Xurxe', 'Toivo', 'Garcia');
+
+
+
+/* 12c. Declare a function named addNumbers and it takes two two parameters and it returns sum. */
+function addNumbers (numOne, numTwo) {
+    console.log(numOne + numTwo);
+}
+
+addNumbers(7, 3);
+
+
+
+/* 12d. Declare a function named printArray. It takes array as a parameter and it prints out each value of the array. */
+function printArray (array) {
+    var i = 0;
+    while (i < array.length) {
+        console.log(array[i]);
+        i++;
+    }
+}
+
+var fruits = ['apple', 'banana', 'clementine'];
+printArray(fruits);
+
+
+
+/* 12e. Declare a function named reverseArray. It takes array as a parameter and it returns the reverse of the array(dont’ use method). */
+function reverseArray(array) {
+    var i = array.length - 1;
+    while (i >= 0) {
+        console.log(array[i]);
+        i--;
+    }
+}
+
+reverseArray(fruits);
+
+
+
+/* 12f. Declare a function named capitalizeArray. It takes array as a parameter and it returns the capitalized array. */ 
+function capitalizeArray(array) {
+    var i = 0;
+    while (i < array.length) {
+        console.log(array[i].toUpperCase());
+        i++;
+    }
+}
+
+capitalizeArray(fruits);
+
+
+
+/* 12g.Declare a function named removeItem. It returns array after removing an item */
+function removeItem(array) {
+    array.splice(Math.random(0, array.length), 1);
+    console.log(array);
+}
+
+removeItem(fruits);
+
+
+
+/* 12h. Declare a function named addItem. It returns array after adding an item */
+function addItem(array, item) {
+    array.push(item);
+    console.log(array);
+}
+
+addItem(fruits, 'durian');
+
+
+
+/* 12i. Declare a function named sumOfNumbers. It takes a number parameter and it adds all the numbers in that range. */
+sum = 0;
+
+function sumOfNumbers(numOne, numTwo) {
+    for (var i = numOne; i <= numTwo; i++) {
+        sum = sum + i;
+    }
+    console.log(sum);
+}
+
+sumOfNumbers(1, 4);
+
+
+
+
+/* 12j. Declare a function named sumOfOdds. It takes a number parameter and it adds all the odd numbers in that range. */
+sumOdds = 0;
+function sumOfOdds(numOne, numTwo) {
+    if (numOne % 2 === 1) {
+        for (var i = numOne; i <=numTwo; i += 2) {
+            sumOdds += i;
+        }
+    }
+
+    else {
+        for (var i = numOne + 1; i <= numTwo; i += 2) {
+            sumOdds += i;
+        }
+    }
+    console.log(sumOdds);
+}
+
+sumOfOdds (1, 4);
+
+
+
+/* 12k. Declare a function named sumOfEven. It takes a number parameter and it adds all the even numbers in that range. */
+sumEvens = 0;
+function sumOfEvens(numOne, numTwo) {
+    if (numOne % 2 === 0) {
+        for (var i = numOne; i <=numTwo; i += 2) {
+            sumEvens += i;
+        }
+    }
+
+    else {
+        for (var i = numOne + 1; i <= numTwo; i += 2) {
+            sumEvens += i;
+        }
+    }
+    console.log(sumEvens);
+}
+
+sumOfEvens(1, 4);
+
+
+
+/* 12l. Declare a function named evensAndOdds. It takes a number parameter and it counts number of evens and odds in the number. */
+
+function evensAndOdds(number) {
+
+    if (Math.abs(number) > 3) {
+        if (number % 2 === 0) {
+            console.log(`There are ${Math.abs(number) / 2} odd numbers and ${Math.abs(number) / 2} even numbers between 0 and ${number} (both included).`)
+        }
+    
+        else {
+            console.log(`There are ${(Math.abs(number) + 1) / 2} odd numbers and ${(Math.abs(number) - 1) / 2} even numbers between 0 and ${number} (both included).`)
+        }
+    }
+
+    else {
+        if (number % 2 === 0) {
+            console.log(`There is 1 odd number and 1 even number between 0 and ${number} (both included).`)
+        }
+    
+        else {
+            console.log(`There are ${(Math.abs(number) + 1) / 2} odd numbers and 1 even number between 0 and ${number} (both included).`)
+        }
+    }
+}
+
+evensAndOdds(-4);
+
+
+/* 12m. Declare a function named randomHexaNumberGenerator.
+When this function is called it generates and returns a random hexadecimal number.
+output:
+console.log(randomHexaNumberGenerator());
+ '#ee33df'
+console.log(randomHexaNumberGenerator());
+'#28def10'
+console.log(randomHexaNumberGenerator());
+'#38eeda' */
+
+function randomHexNumberGenerator() {
+    return '#' + Math.random().toString(16).substr(2, 6).toUpperCase();
+}
+
+console.log(randomHexNumberGenerator());
+
+
+
+/* 12n. Declare a function name userIdGenerator. When this function is called it generates and returns a seven character id.
+Output:
+console.log(userIdGenerator());
+41XTDbE */
+
+var charset = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+
+function userIdGenerator(){
+    var userIdArray = [];
+    for (var i = 0; i < 7; i++) {
+        var index = Math.floor(Math.random() * charset.length);
+        userIdArray.push(charset[index]);
+    }
+    var userId = userIdArray.join('');
+    return userId;
+}
+
+console.log(userIdGenerator());
+
+
+
+/* 12o. Modify question number n. Declare a function name userIdGeneratedByUser.
+It doesn’t take any parameter but it takes two inputs using prompt().
+One of the input is the number of characters
+and the second input is the number of ids which are supposed to be generated. 
+
+userIdGeneratedByUser()
+"kcsy2
+SMFYb
+bWmeq
+ZXOYh
+2Rgxf
+"
+userIdGeneratedByUser()
+"3RexwUqvqe
+rVUY6dC1il
+YCf88ZHuAf
+7JhI6Mn063
+mo3GYyH26O
+"
+userIdGeneratedByUser()
+"1GCSgPLMaBAVQZ26
+YD7eFwNQKNs7qXaT
+ycArC5yrRupyG00S
+UbGxOFI7UXSWAyKN
+dIV0SSUTgAdKwStr
+" */
+
+var idLength = prompt('How many characters long should your ID be?');
+var idAmount = prompt('How many IDs do you want to generate?');
+
+function userIdGenerator(){
+    var userIdArray = [];
+    for (var i = 0; i < idLength; i++) {
+        var index = Math.floor(Math.random() * charset.length);
+        userIdArray.push(charset[index]);
+    }
+    var userId = userIdArray.join('');
+    return userId;
+}
+
+function userIdsGeneratedByUser() {
+    var userIdsArray = [];
+    for (var j = 0; j < idAmount; j++) {
+        userIdsArray.push(userIdGenerator());
+    }
+    return userIdsArray;
+}
+
+console.log(userIdsGeneratedByUser());
+
+
+
+/* 12p. Write a function name rgbColorGenerator and it generates rgb colors.
+Output:
+rgb(125,244,255) */
+function rgbValue() { 
+    return Math.floor(Math.random() * 256);
+}
+
+function rgbColorGenerator() {
+    return 'rgb(' + rgbValue() + ', ' + rgbValue() + ', ' + rgbValue() + ')';
+}
+
+console.log(rgbColorGenerator());
+
+
+
+/* 12q. Call your function shuffleArray, it takes an array as a parameter and it returns a shuffled array */
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+shuffleArray(fruits);
+console.log(fruits);
+
+
+
+/* 12r. Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number */
+var factor = 1;
+function factorial(number) {
+    for (var i = number; i > 0; i--) {
+        factor = factor * i;
+    }
+    return factor;
+}
+
+console.log(factorial(5));
+
+
+
+/* 12s. Call your function isEmpty, it takes a parameter and it checks if it is empty or not. */
+function isEmpty(value) {
+    if (value === undefined || value === null) {
+        return true;
+    }
+
+    else {
+        return false;
+    }
+}
+
+console.log(isEmpty());
+
+
+
+/* 12t. Call your function sum, it takes any number of arguments and it returns the sum. */
+sum = 0;
+function sumNumbers() {
+    for (var i = 0; i < arguments.length; i++) {
+        sum += arguments[i];
+    }
+    return sum;
+}
+
+console.log(sumNumbers(2, 3, 4));
