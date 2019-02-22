@@ -1,7 +1,14 @@
 /* DATA TYPES *************************************************************************************************** */
+/* Declare variables and assign string, boolean, undefined and null data types */
+var favoriteFood = chocolate; 
+var likesChocolate = true;
+var hatesChocolate;
+var hatesChocolate = null;
+
+
+
 /* The JavaScript typeof operator can be used to check different data types.
 Check the data type of each variable from question number 1. */
-
 console.log(typeof firstName);
 console.log(typeof lastName);
 console.log(typeof maritalStatus);
@@ -162,7 +169,7 @@ console.log(endsWithyCompany);
 
 
 
-/* Use  match() to find all the c’s in Coding Academy */
+/* Use match() to find all the c’s in Coding Academy */
 matchcCompany = company.match(/c/g); /* case-sensitive */
 console.log(matchcCompany);
 
@@ -184,7 +191,7 @@ console.log(concatCompany);
 
 
 
-/* Use repeat() method to print Coding Academy 5 times */
+/* Use the repeat() method to print Coding Academy 5 times */
 repeatedFiveCompany = 'Coding Academy '.repeat(5);
 console.log(repeatedFiveCompany);
 

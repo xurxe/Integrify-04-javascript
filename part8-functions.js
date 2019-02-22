@@ -482,7 +482,3 @@ function displayCurrentDateTime() {
 }
 
 displayCurrentDateTime();
-
-
-
-
