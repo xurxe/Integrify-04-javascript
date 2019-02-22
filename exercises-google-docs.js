@@ -258,7 +258,7 @@ Which are true or which are false ? */
 
 
 
-/* 8a. Get user input using prompt(“Enter your age:”).
+/* 8a. Get user input using the prompt(“Enter your age:”).
 If the user is 18 or older, give feedback: "You are old enough to drive"
 If not 18 yet tell the user to wait for the years they are supposed to wait for. */
 

@@ -4,7 +4,7 @@ My answers to a number of JS exercises.
 
 [exercise-google-docs.js](https://github.com/xurxe/Integrify-4-javascript) contains exercises from a Google Doc that was shared with us.
 
-The rest correspond to the repository [JavaScript for Everyone](https://github.com/xurxe/JavaScript-for-Everyone), forked from our teacher [Asabeneh](https://github.com/Asabeneh/JavaScript-for-Everyone).
+The rest correspond to parts of this repository [JavaScript for Everyone](https://github.com/xurxe/JavaScript-for-Everyone), forked from our teacher [Asabeneh](https://github.com/Asabeneh/JavaScript-for-Everyone).
 
 ## Author
 
