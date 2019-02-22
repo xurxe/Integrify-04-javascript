@@ -463,6 +463,7 @@ function displayDateTime(day, month, year, hour, minute) {
 displayDateTime(18, 1, 1990, 18, 00);
 
 
+
 /* Use the new Date() object to get month, date, year, hour and minute. Output:
 28/08/2018 04:08 */
 
@@ -482,3 +483,118 @@ function displayCurrentDateTime() {
 }
 
 displayCurrentDateTime();
+
+
+
+/* Call your function shuffleArray, it takes an array as a parameter and it returns a shuffled array */
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+shuffleArray(fruits);
+console.log(fruits);
+
+
+
+/* Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number */
+var factor = 1;
+function factorial(number) {
+    for (var i = number; i > 0; i--) {
+        factor = factor * i;
+    }
+    return factor;
+}
+
+console.log(factorial(5));
+
+
+
+/* Call your function isEmpty, it takes a parameter and it checks if it is empty or not. */
+function isEmpty(value) {
+    if (value === undefined || value === null) {
+        return true;
+    }
+
+    else {
+        return false;
+    }
+}
+
+console.log(isEmpty());
+
+
+
+/* Call your function sum, it takes any number of arguments and it returns the sum. */
+sum = 0;
+function sumNumbers() {
+    for (var i = 0; i < arguments.length; i++) {
+        sum += arguments[i];
+    }
+    return sum;
+}
+
+console.log(sumNumbers(2, 3, 4));
+
+
+
+
+/* TO DOO ***************************************************************************************************** */
+
+/* Write a function called sumOfArrayItems, it takes an array parameter and return the sum of all the items.
+Check if all the array items are number types. If not give return reasonable feedback. */
+numberArray = [1, 2, 3, 4, 5, 6];
+
+
+function sumOfArrayItems (array){
+    var sum = 0;
+    for (var i = 0; i < array.length; i++) {
+        if (typeof array[i] === "number") {
+            sum += array[i];
+            console.log(sum);
+        }
+
+        else {
+            console.log("Your array can only contain number values.")
+        }
+    }
+}
+
+sumOfArrayItems(numberArray);
+
+
+/* Write a function called average, it takes an array parameter and returns the average the items.
+Check if all the array items are number types. If not give return reasonable feedback. */
+
+
+
+
+
+
+/* Write a function called modifyArray takes array as parameter,
+modifies the fifth item of the array and returns the array.
+If the array length is less than five it return ‘item not found’. */
+
+/* console.log(modifyArray(["Avocado", "Tomato", "Potato","Mango", "Lemon","Carrot"]);
+// →["Avocado", "Tomato", "Potato","Mango", "LEMON", "Carrot"]
+console.log(modifyArray(["Google", "Facebook","Apple", "Amazon","Microsoft",  "IBM"]);
+// →["Google", "Facebook","Apple", "Amazon","MICROSOFT",  "IBM"]
+console.log(modifyArray(["Google", "Facebook","Apple", "Amazon"]);
+// →"Not Found" */
+
+function modifyArray (array) {
+    if (array.length >= 5) {
+        array[5].toUpperCase();
+        return array;
+    }
+
+    else {
+        return 'Item not found';
+    }
+}
+
+var itCompanies = ['Facebook', 'Google', 'Microsoft', 'IBM', 'Apple', 'Oracle', 'Amazon'];
+
+console.log(modifyArray(itCompanies));
