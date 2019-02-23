@@ -2,7 +2,7 @@
 /* Declare variables and assign string, boolean, undefined and null data types */
 var favoriteFood = chocolate; 
 var likesChocolate = true;
-var hatesChocolate;
+var dislikesChocolate;
 var hatesChocolate = null;
 
 
@@ -16,6 +16,10 @@ console.log(typeof nation);
 console.log(typeof age);
 console.log(typeof myAge);
 console.log(typeof yourAge);
+console.log(typeof favoriteFood);
+console.log(typeof likesChocolate);
+console.log(typeof dislikesChocolate);
+console.log(typeof hatesChocolate);
 
 
 
@@ -38,13 +42,13 @@ console.log(company.length);
 
 
 
-/* Change the string to uppercase letters using toUpperCase() method */
+/* Change the string to uppercase letters using the toUpperCase() method */
 upperCaseCompany = company.toUpperCase();
 console.log(upperCaseCompany);
 
 
 
-/* Change the string to lowercase letters using toLowerCase() method */
+/* Change the string to lowercase letters using the toLowerCase() method */
 lowerCaseCompany = company.toLowerCase();
 console.log(lowerCaseCompany);
 
@@ -79,7 +83,7 @@ console.log(includesAcademy);
 
 
 
-/* Split the string into array using split() method */
+/* Split the string into an array using split() method */
 splitCompany = company.split();
 console.log(splitCompany);
 
@@ -105,27 +109,27 @@ console.log(replacedCompany);
 
 
 
-/* What is the character at index 10 in Coding Academy’ string? User charAt() */
+/* What is the character at index 10 in Coding Academy’ string? Use charAt() */
 tenCompany = company.charAt(10);
 console.log(tenCompany);
 
 
 
-/* What is the character code of A in ‘Coding Academy’ string using charCodeAt() */
+/* What is the character code of A in ‘Coding Academy’? Use charCodeAt() */
 tenCodeCompany = company.charCodeAt(company.indexOf('A'));
 console.log(tenCodeCompany);
 
 
 
 /* Use indexOf() to determine the position of the first occurrence of c in Coding Academy */
-indexOfeCompany = company.indexOf('c');
-console.log(indexOfeCompany);
+indexOfcCompany = company.indexOf('c');
+console.log(indexOfcCompany);
 
 
 
 /* Use lastIndexOf() to determine the position of the last occurrence of e in Coding Academy */
-lastIndexOfeCompany = company.lastIndexOf('c');
-console.log(lastIndexOfeCompany);
+lastIndexOfcCompany = company.lastIndexOf('c');
+console.log(lastIndexOfcCompany);
 
 
 
@@ -178,7 +182,7 @@ console.log(matchCcCompany);
 
 
 
-/* Use match() to count the number of times the word because is in the following sentence:
+/* Use match() to count the number of times the word "because" is in the following sentence:
 'You cannot end a sentence with because because because is a conjunction' */
 countBecause = sentence.match(/because/ig).length;
 console.log(countBecause);
@@ -230,3 +234,19 @@ var age = 29;
 var happy = false;
 var animal = null;
 var age = NaN;
+
+
+
+/* 	Use the following comparison operators to compare the values below: >, < >=, <=, !=, !==,===. 
+Which are true and which are false ? */
+console.log(4 > 3); /* true */
+console.log(4 >= 3); /* true */
+console.log(4 < 3); /* false */
+console.log(4 <=3); /* false */
+console.log(4 == 4); /* true */
+console.log(4 === 4); /* true */
+console.log(4 != 4); /* false */
+console.log(4 !== 4); /* false */
+console.log(4 != '4'); /* false */
+console.log(4 == '4'); /* true */
+console.log(4 === '4'); /* false */

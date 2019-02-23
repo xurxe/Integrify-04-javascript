@@ -40,10 +40,8 @@ i--
 
 /* Iterate the itCompanies array from earlier using a for-loop and print out the items. */
 var itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
-var i = 0;
-while (i < itCompanies.length) {
-console.log(itCompanies[i]);
-i++;
+for (i = 0; i < itCompanies.length; i++) {
+    console.log(itCompanies[i]);
 }
 
 
@@ -75,7 +73,6 @@ console.log(`The sum of all numbers is ${sum}`);
 
 /* Use the for-loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds. */
 /* The sum of all evens is 2550. And the sum of all odds is 2500. */
-
 sumEvens = 0;
 sumOdds = 0;
 

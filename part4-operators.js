@@ -9,7 +9,7 @@ let operandTwo = 3;
 
 
 
-/* Using the above operands apply different JavaScript arithmetic operators. */
+/* Using the above operands, apply different JavaScript arithmetic operators. */
 var added = operandOne + operandTwo;
 console.log(added);
 
@@ -47,7 +47,7 @@ console.log(unaryPlus);
 
 
 /* LOGICAL OPERATORS ******************************************************************************************** */
-/* &&, || and ! are JavaScript logical operators. Which are true or which are false ? */
+/* &&, || and ! are JavaScript logical operators. Of the statements below, which are true and which are false ? */
 console.log(4 > 3 && 10 < 12); /* true */
 console.log(4 > 3 && 10 > 12); /* false */
 console.log(4 > 3 || 10 < 12); /* true */

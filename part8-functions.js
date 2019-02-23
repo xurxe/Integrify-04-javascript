@@ -23,12 +23,12 @@ console.log(fullName('Xurxe', 'Toivo', 'Garcia'));
 
 
 
-/* Declare a function named addNumbers that takes two two parameters and returns sum. */
-function addNumbers (numOne, numTwo) {
+/* Declare a function named addNumbers that takes two two parameters and returns their sum. */
+function addTwoNumbers (numOne, numTwo) {
     return(numOne + numTwo);
 }
 
-console.log(addNumbers(7, 3));
+console.log(addTwoNumbers(7, 3));
 
 
 
@@ -62,7 +62,8 @@ console.log(volumeOrRectPrism(2, 3, 4));
 
 
 
-/* The rea of a circle is calculated as follows: area = π x r x r. Write a function which calculates areaOfCircle */
+/* The area of a circle is calculated as follows: area = π x r x r.
+Write a function that calculates areaOfCircle */
 function areaOfCircle(radius) {
     return(Math.PI * radius ** 2);
 }
@@ -80,7 +81,7 @@ console.log(circumference(1));
 
 
 
-/* The density of a substance is calculated as follows:density= mass/volume.
+/* The density of a substance is calculated as follows: density = mass/volume.
 Write a function that calculates density. */
 function density(mass, volume) {
     return(mass / volume);
@@ -90,8 +91,8 @@ console.log(density(6, 3));
 
 
 
-/* Speed is calculated by dividing the total distance covered by a moving object
-divided by the total amount of time taken.
+/* The speed of a moving object is calculated by calculating the total distance covered by the object
+divided by the total amount of time elapsed.
 Write a function speed that calculates the speed of a moving object. */
 function speed(distance, time) {
     return (distance / time);
@@ -120,11 +121,37 @@ console.log(convertCtoF(100));
 
 
 
+/* Write a function called checkSeason. It takes a month parameter and returns the season: Autumn, Winter, Spring or Summer. */
+function checkMonth(month) {
+    if (/[Ss]ep[tember]*/.test(month) || /[Oo]ct[ober]*/.test(month) || /[Nn]ov[ember]*/.test(month)) {
+        return season = 'fall';
+    }
+    
+    else if (/[Dd]ec[ember]*/.test(month) || /[Jj]an[uary]*/.test(month) || /[Ff]eb[ruary]*/.test(month)) {
+        return season = 'winter';
+    }
+    
+    else if (/[Mm]ar[ch]*/.test(month) || /[Aa]pr[il]*/.test(month) || /[Mm]ay/.test(month)) {
+        return season = 'spring';
+    }
+    
+    else if (/[Jj]un[e]*/.test(month) || /[Jj]ul[y]*/.test(month) || /[Aa]ug[ust]*/.test(month)) {
+        return season = 'summer';
+    }
+    
+    else {
+        return season = null;
+    }
+}
+
+console.log(checkMonth('jan'));
+
+
+
 /* A linear equation is described as follows: ax + b = c.
 Write a function which calculates value of a linear equation, solvLinEquation. */
 
 /* solve for x given parameters a, b and c: x = (b - c ) / a */
-
 function solveLinEquation (a, b, c){
     return((b - c) / a);
 }
@@ -137,7 +164,6 @@ console.log(solveLinEquation(1, 2, 3));
 Write a function that calculates the value or values of a quadratic equation, solvQuadEquation. */
 
 /* solve for x given parameters a, b and c: x = (-b ± (b^2 - 4ac)^1/2) / 2a */
-
 function solveQuadEquation (a, b, c) {
     var xOne = (-b + (b**2 - 4*a*c)**0.5) / 2*a;
     var xTwo = (-b - (b**2 - 4*a*c)**0.5) / 2*a;
@@ -239,6 +265,7 @@ removeItem(fruits);
 
 
 /* Declare a function named sumOfNumbers. It takes a number parameter and it adds all the numbers in that range. */
+
 /* renamed function as sumNumbers (verb) and variable as sumOfNumbers (noun) */
 var sumOfNumbers = 0;
 function sumNumbers(numOne, numTwo) {
@@ -253,6 +280,7 @@ sumNumbers(1, 4);
 
 
 /* Declare a function named sumOfOdds. It takes a number parameter and it adds all the odd numbers in that range. */
+
 /* renamed function as sumOdds (verb) and variable as sumOfOdds (noun) */
 var sumOfOdds = 0;
 function sumOdds(numOne, numTwo) {
@@ -275,6 +303,7 @@ console.log(sumOdds (1, 4));
 
 
 /* Declare a function named sumOfEven. It takes a number parameter and it adds all the even numbers in that range. */
+
 /* renamed function as sumEvens (verb) and variable as sumOfEvens (noun) */
 var sumEvens = 0;
 function sumOfEvens(numOne, numTwo) {
@@ -296,7 +325,8 @@ sumOfEvens(1, 4);
 
 
 
-/* Declare a function named evensAndOdds. It takes a number parameter and it counts number of evens and odds in the number. */
+/* Declare a function named evensAndOdds.
+It takes a number parameter and it counts number of evens and odds in the number. */
 
 function evensAndOdds(number) {
 
@@ -362,7 +392,7 @@ Output:
 console.log(userIdGenerator());
 41XTDbE */
 
-var charset = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+var charset = /[0-9A-Za-z]/
 
 function userIdGenerator(){
     var userIdArray = [];
@@ -448,7 +478,7 @@ console.log(rgbColorGenerator());
 /* Write a function named displayDateTime that display the date in this format: 28/08/2018 04:08 */
 function displayDateTime(day, month, year, hour, minute) {
     day = "00" + day;
-    day = day.substr(-2);
+    day = day.substr(-2); /* this ensures that leading zeroes are not removed */
     month = "00" + month;
     month = month.substr(-2);
     year = "0000" + year;
@@ -494,6 +524,7 @@ function shuffleArray(array) {
     }
 }
 
+var fruits = ['apple', 'banana', 'clementine', 'durian', 'elderberry', 'fig', 'grapes', 'honeydew']
 shuffleArray(fruits);
 console.log(fruits);
 
@@ -540,36 +571,49 @@ console.log(sumNumbers(2, 3, 4));
 
 
 
-
-/* TO DOO ***************************************************************************************************** */
-
 /* Write a function called sumOfArrayItems, it takes an array parameter and return the sum of all the items.
 Check if all the array items are number types. If not give return reasonable feedback. */
-numberArray = [1, 2, 3, 4, 5, 6];
-
-
 function sumOfArrayItems (array){
     var sum = 0;
     for (var i = 0; i < array.length; i++) {
-        if (typeof array[i] === "number") {
-            sum += array[i];
-            console.log(sum);
+        if (typeof array[i] !== "number") {
+            console.log("Your array can only contain number values.");
+            return sum = null;
         }
 
         else {
-            console.log("Your array can only contain number values.")
+            sum += array[i];
         }
     }
+    console.log(`The sum of the items in your array is ${sum}.`)
+    return sum;
 }
 
+numberArray = [1, 2, 3, 4, 5, 6];
 sumOfArrayItems(numberArray);
+
 
 
 /* Write a function called average, it takes an array parameter and returns the average the items.
 Check if all the array items are number types. If not give return reasonable feedback. */
+function meanOfArrayItems (array){
+    var sum = 0;
+    for (var i = 0; i < array.length; i++) {
+        if (typeof array[i] !== "number") {
+            console.log("Your array can only contain number values.");
+            return mean = null;
+        }
 
+        else {
+            sum += array[i];
+        }
+    }
+    console.log(`The mean of the items in your array is ${sum / array.length}.`);
+    return mean = sum / array.length;
+}
 
-
+numberArray = [1, 2, 3, 4, 5, 'cat'];
+meanOfArrayItems(numberArray);
 
 
 
@@ -583,10 +627,9 @@ console.log(modifyArray(["Google", "Facebook","Apple", "Amazon","Microsoft",  "I
 // →["Google", "Facebook","Apple", "Amazon","MICROSOFT",  "IBM"]
 console.log(modifyArray(["Google", "Facebook","Apple", "Amazon"]);
 // →"Not Found" */
-
 function modifyArray (array) {
     if (array.length >= 5) {
-        array[5].toUpperCase();
+        array[4] = array[4].toUpperCase();
         return array;
     }
 

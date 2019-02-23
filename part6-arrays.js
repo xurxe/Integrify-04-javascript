@@ -8,8 +8,8 @@ var fruits = [];
 
 
 
-/* Declare an array with more than 5 number of items */
-var fruits = ['apple', 'banana', 'clementine', 'durian', 'elderberry', 'fig', 'grapes']
+/* Declare an array with more than 5 items */
+var fruits = ['apple', 'banana', 'clementine', 'durian', 'elderberry', 'fig', 'grapes', 'honeydew']
 
 
 /* Find the length of your array */
@@ -22,7 +22,7 @@ console.log(fruits.length);
 var firstFruit = fruits.slice(0, 1);
 
 var middleFruit = fruits.slice(Math.floor((fruits.length - 1) / 2),
-    Math.ceil((fruits.length + 1) / 2))
+    Math.ceil((fruits.length + 1) / 2)) /* this works on all array lengths */
 
 var lastFruit = fruits.slice(-1);
 
@@ -32,8 +32,9 @@ console.log(lastFruit);
 
 
 
-/* Declare an array called *mixedDataTypes*, and put different data types in your array. The array size should be greater than 5 */
-var mixedDataTypes = [1, 'two', true, undefined, null];
+/* Declare an array called mixedDataTypes, and put different data types in your array.
+The array length should be greater than 5 */
+var mixedDataTypes = [1, 'one', false, 'false', undefined, null];
 console.log(mixedDataTypes);
 
 
@@ -57,8 +58,7 @@ console.log(itCompanies.length)
 /* Print the first company, middle and last company */
 var firstCompany = itCompanies.slice(0, 1);
 
-var middleCompany = itCompanies.slice(Math.floor((fruits.length - 1) / 2),
-    Math.ceil((itCompanies.length + 1) / 2))
+var middleCompany = itCompanies.slice(Math.floor((itCompanies.length - 1) / 2), Math.ceil((itCompanies.length + 1) / 2))
 
 var lastCompany = itCompanies.slice(-1);
 
@@ -86,10 +86,18 @@ for (i = 0; i < itCompanies.length; i++) {
 
 
 
-/* Print the array like a sentence: "Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies." */
-console.log(`${itCompanies[0]}, ${itCompanies[1]}, ${itCompanies[2]}, ${itCompanies[3]}, 
-${itCompanies[4]}, ${itCompanies[5]}, and ${itCompanies[6]} are big IT companies.`);
+/* Print the array like a sentence: "Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon are big IT companies." */
+function itSentence(array) {
+    var sentenceBeginning = '';
+    for (i = 0; i < (array.length - 1); i++)
+    {
+        sentenceBeginning = sentenceBeginning.concat(`${array[i]}, `);
+    }
+    return fullSentence = `${sentenceBeginning}and ${array[array.length - 1]} are big IT Companies.`;
+}
 
+console.log(itSentence(itCompanies));
+ 
 
 
 /* Check if a certain company exists in the itCompanies array.
@@ -107,7 +115,6 @@ else {
 
 
 /* Filter out companies which have more than two ‘o’ without the filter method */
-
 maxOCount = 1; /* made it one so it makes more sense with the list of companies */
 
 for (var i = 0; i < itCompanies.length; i++) {
