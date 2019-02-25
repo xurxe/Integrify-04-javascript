@@ -522,6 +522,7 @@ function shuffleArray(array) {
         var j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
+    return array;
 }
 
 var fruits = ['apple', 'banana', 'clementine', 'durian', 'elderberry', 'fig', 'grapes', 'honeydew']

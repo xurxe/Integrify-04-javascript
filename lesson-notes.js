@@ -1,3 +1,7 @@
+/* MONDAY 18.FEB.2019 ****************************************************************************************** */
+
+
+
 /*  write on the document */
 document.write('Let us learn some JavaScript');
 
@@ -541,3 +545,214 @@ console.log(schoolIntegrify);
 
 var schoolAcademy = school.startsWith('Academy');
 console.log(schoolAcademy);
+
+
+
+
+
+
+
+
+
+/* MONDAY 25.FEB.2019 ****************************************************************************************** */
+
+
+
+/* Math methods ************************************************************************ */
+
+var PI = Math.PI; // customary to use capitals for constants
+console.log(PI);
+console.log(Math.round(PI)); // round closest
+console.log(Math.floor(PI)); // round up
+console.log(Math.ceil(PI)); // round down
+console.log(Math.sqrt(PI)); // square root
+console.log(Math.abs(-PI)); // absolute
+
+function areaOfCircle(radius) {
+    var area = Math.PI * radius ** 2 // PI * r^2
+    return area; 
+}
+
+console.log(areaOfCircle(10));
+console.log(areaOfCircle(10).toFixed(2)); // returns result as a string, with two decimal figures
+console.log(Number(areaOfCircle(10).toFixed(2))) // same as previous, but changes back into a number
+
+console.log(Math.random()); // returns a random decimal number between 0 (inclusive) and 1 (exclusive)
+console.log(Math.random()*11); // returns a random decimal number between 0 (inc) and 11 (exc)
+console.log(Math.floor(Math.random()*11)); // returns a random integer between 9 (inc) and 11 (exc). So, from 1 to 10.
+
+function rgbColorGenerator() {
+    let red = Math.floor(Math.random()*256);
+    let green = Math.floor(Math.random()*256);
+    let blue = Math.floor(Math.random()*256);
+    return `rgb(${red}, ${green}, ${blue})`;
+}
+
+ console.log(rgbColorGenerator());
+
+
+
+/* Scope ******************************************************************************* */
+
+function varTest() {
+    var x = 1;
+    console.log(x);
+    if (true) {
+        var x = 2;
+        console.log(x);
+    }
+    console.log(x);
+}
+varTest();
+
+function letTest() {
+    let x = 1;
+    console.log(x);
+    if (true) {
+        let x = 2;
+        console.log(x);
+    }
+    console.log(x);
+}
+
+letTest();
+
+for(var i = 0; i < 6; i++) {
+    console.log(i);
+}
+
+console.log(i); // this returns 6, because var has a global scope
+
+for(let j = 0; j < 6; j++) {
+    console.log(j);
+}
+
+/* console.log(j); */ // this returns undefined, because let has a local scope
+
+/* impure function: one that uses global variables declared outside itself */
+/* pure function: one that uses only local variables declared inside itself */
+
+const GRAVITY = 9.8;
+/* GRAVITY = 10; */ // it doesn't let you do this, because you can't reassign a constant
+console.log(GRAVITY); 
+
+const order = [1, 2, 3, 4, 5];
+var countries = ['Albania', 'Bolivia', 'Canada'];
+countries.push('Denmark'); /* you can, however, push items to a constant array */
+console.log(countries);
+
+
+
+/* Array methods ************************************************************************ */
+
+function zeroToTen() {
+    var array = [];
+    for (let i = 0; i < 10; i++) {
+        array.push(i);
+    }
+    return array;
+}
+
+console.log(zeroToTen());
+
+
+function randomArray() {
+    var array = [];
+    for (let i = 0; i < 10; i++) {
+        const randomNumber = Math.floor(Math.random()*11);
+        array.push(randomNumber);
+    }
+    return array;
+}
+
+console.log(randomArray());
+
+
+var countries = ['Albania', 'Bolivia', 'Canada'];
+
+countries.push('Denmark'); // adds at the end
+console.log(countries);
+
+countries.pop(); // removes one from the end
+console.log(countries);
+
+countries.unshift('Denmark'); // adds in the beginning
+console.log(countries);
+
+countries.shift(); // removes one from the beginning
+console.log(countries);
+
+
+
+/* Functions ***************************************************************************** */
+
+function nameOfFunction() {
+    console.log('I am a function.')
+}
+nameOfFunction();
+
+
+
+/* declaration function */
+function square (n) {
+    return n ** 2;
+}
+console.log(square(10));
+
+
+
+/* expression function or anonymous function */
+const squareOne = function (n) {
+    return n ** 2;
+}
+console.log(squareOne(10));
+
+
+
+/* Arrow function */
+const squareTwo = (n) => {
+    return n ** 2;
+}
+console.log(squareTwo(10));
+
+const squareThree = (n) => n ** 2;
+console.log(squareThree(10));
+
+
+
+/* Objects ***************************************************************************************************** */
+
+const person = {
+    firstName: 'Xurxe',
+    lastName: 'Garcia',
+    age: 29,
+    job: 'Junior web developer',
+    skills: ['HTML', 'CSS', 'JavaScript'],
+    isMarried: false,
+    getPersonName() {
+        return this.firstName + ' ' + this.lastName;
+    },
+
+    getPersonIntro() {
+        return `My name is ${this.firstName} ${this.lastName}. I am a ${this.job}.`
+    }
+};
+
+console.log(person);
+console.log(person.getPersonName());
+console.log(person.getPersonIntro());
+
+const rectangle = {
+    width: 100,
+    height: 200,
+    getAreaOfRectangle() {
+        return this.width * this.height;
+    },
+    getPerimeterOfRectangle() {
+        return (this.width + this.height) * 2; 
+    }
+}
+
+console.log(rectangle);
+console.log(rectangle.getAreaOfRectangle());
+console.log(rectangle.getPerimeterOfRectangle());
