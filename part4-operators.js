@@ -10,38 +10,38 @@ let operandTwo = 3;
 
 
 /* Using the above operands, apply different JavaScript arithmetic operators. */
-var added = operandOne + operandTwo;
+let added = operandOne + operandTwo;
 console.log(added);
 
-var subtracted = operandOne - operandTwo;
+let subtracted = operandOne - operandTwo;
 console.log(subtracted);
 
-var multiplied = operandOne * operandTwo;
+let multiplied = operandOne * operandTwo;
 console.log(multiplied);
 
-var divided = operandOne / operandTwo;
+let divided = operandOne / operandTwo;
 console.log(divided);
 
-var remainder = operandOne % operandTwo;
+let remainder = operandOne % operandTwo;
 console.log(remainder);
 
-var incremented = ++operandOne;
+let incremented = ++operandOne;
 console.log(incremented);
 
-var decremented = --operandTwo;
+let decremented = --operandTwo;
 console.log(decremented);
 
 
 
 /* And also */
 
-var raised = operandOne ** operandTwo
+let raised = operandOne ** operandTwo
 console.log(raised);
 
-var unaryMinus = -operandOne;
+let unaryMinus = -operandOne;
 console.log(unaryMinus);
 
-var unaryPlus = +operandOne;
+let unaryPlus = +operandOne;
 console.log(unaryPlus);
 
 

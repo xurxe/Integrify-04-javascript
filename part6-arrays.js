@@ -3,28 +3,28 @@
 
 
 /* Declare an *empty* array; */
-
-var fruits = [];
+let vegetables = [];
+console.log(vegetables);
 
 
 
 /* Declare an array with more than 5 items */
-var fruits = ['apple', 'banana', 'clementine', 'durian', 'elderberry', 'fig', 'grapes', 'honeydew']
+let fruits = ['apple', 'banana', 'clementine', 'durian', 'elderberry', 'fig', 'grapes', 'honeydew']
+console.log(fruits);
 
 
 /* Find the length of your array */
-
 console.log(fruits.length);
 
 
 
 /* Get the first item, the middle item and the last item of the array */
-var firstFruit = fruits.slice(0, 1);
+let firstFruit = fruits.slice(0, 1);
 
-var middleFruit = fruits.slice(Math.floor((fruits.length - 1) / 2),
-    Math.ceil((fruits.length + 1) / 2)) /* this works on all array lengths */
+let middleFruit = fruits.slice(Math.floor((fruits.length - 1) / 2),
+    Math.ceil((fruits.length + 1) / 2)); /* this works on all array lengths */
 
-var lastFruit = fruits.slice(-1);
+let lastFruit = fruits.slice(-1);
 
 console.log(firstFruit);
 console.log(middleFruit);
@@ -34,14 +34,14 @@ console.log(lastFruit);
 
 /* Declare an array called mixedDataTypes, and put different data types in your array.
 The array length should be greater than 5 */
-var mixedDataTypes = [1, 'one', false, 'false', undefined, null];
+let mixedDataTypes = [1, 'one', false, 'false', undefined, null];
 console.log(mixedDataTypes);
 
 
 
 /* Declare an array variable, name it itCompanies, and assign initial values:
 Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon. */
-var itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
+let itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
 
 
 
@@ -56,11 +56,11 @@ console.log(itCompanies.length)
 
 
 /* Print the first company, middle and last company */
-var firstCompany = itCompanies.slice(0, 1);
+let firstCompany = itCompanies.slice(0, 1);
 
-var middleCompany = itCompanies.slice(Math.floor((itCompanies.length - 1) / 2), Math.ceil((itCompanies.length + 1) / 2))
+let middleCompany = itCompanies.slice(Math.floor((itCompanies.length - 1) / 2), Math.ceil((itCompanies.length + 1) / 2))
 
-var lastCompany = itCompanies.slice(-1);
+let lastCompany = itCompanies.slice(-1);
 
 console.log(firstCompany);
 console.log(middleCompany);
@@ -88,7 +88,7 @@ for (i = 0; i < itCompanies.length; i++) {
 
 /* Print the array like a sentence: "Facebook, Google, Microsoft, Apple, IBM, Oracle and Amazon are big IT companies." */
 function itSentence(array) {
-    var sentenceBeginning = '';
+    let sentenceBeginning = '';
     for (i = 0; i < (array.length - 1); i++)
     {
         sentenceBeginning = sentenceBeginning.concat(`${array[i]}, `);
@@ -102,7 +102,7 @@ console.log(itSentence(itCompanies));
 
 /* Check if a certain company exists in the itCompanies array.
 If it exist return the company else return a company is not found. */
-var company = 'Google';
+let company = 'Google';
 
 if (itCompanies.includes(company)) {
     console.log(`${company} is a large IT company.`)
@@ -115,7 +115,7 @@ else {
 
 
 /* Filter out companies which have more than two ‘o’ without the filter method */
-maxOCount = 1; /* made it one so it makes more sense with the list of companies */
+let maxOCount = 1; /* made it one so it makes more sense with the list of companies */
 
 for (var i = 0; i < itCompanies.length; i++) {
     var oCount = (itCompanies[i].match(/o/ig)||[]).length;
@@ -130,46 +130,45 @@ console.log(itCompanies);
 
 
 /* Sort the array using sort() method */
-console.log(itCompanies.sort());
+itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
+let sortedItCompanies = itCompanies.sort();
+console.log(sortedItCompanies);
 
 
 
 /* Reverse the array using reverse() method */
-console.log(itCompanies.reverse());
+let reversedItCompanies = itCompanies.reverse();
+console.log(reversedItCompanies);
 
 
 
 /* Slice out the first 3 companies from the array */
-var itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
-var firstThree = itCompanies.slice(0, 3);
-console.log(firstThree);
+let firstThreeCompanies = itCompanies.slice(0, 3);
+console.log(firstThreeCompanies);
 
 
 
 /* Slice out the last 3 companies from the array */
-var itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
-var lastThree = itCompanies.slice(-3);
-console.log(lastThree);
+var lastThreeCompanies = itCompanies.slice(-3);
+console.log(lastThreeCompanies);
 
 
 
 /* Slice out the middle IT company or companies from the array */
-var itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
-var middleCompany = itCompanies.slice(Math.floor((itCompanies.length - 1) / 2),
+middleCompany = itCompanies.slice(Math.floor((itCompanies.length - 1) / 2),
     Math.ceil((itCompanies.length + 1) / 2)); /* this works on any array length */
 console.log(middleCompany);
 
 
 
 /* Remove the first IT company from the array */
-var itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
 var splicedFirst = itCompanies.splice(0, 1);
 console.log(itCompanies);
 
 
 
 /* Remove the middle IT company or companies from the array */
-var itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
+itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
 var splicedMiddle = itCompanies.splice(Math.floor((itCompanies.length - 1) / 2),
     Math.abs((itCompanies.length % 2) - 2)); /* this works on any array length */
 console.log(itCompanies);
@@ -177,13 +176,13 @@ console.log(itCompanies);
 
 
 /* Remove the last IT company from the array */
-var itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
+itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
 var splicedLast = itCompanies.splice(-1, 1);
 console.log(itCompanies);
 
 
 
 /* Remove all IT companies */
-var itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
+itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
 var splicedAll = itCompanies.splice(0, itCompanies.length);
 console.log(itCompanies);

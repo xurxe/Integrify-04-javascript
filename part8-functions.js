@@ -3,10 +3,12 @@
 
 
 /* Declare a function named fullName that prints out your full name. */
+let firstName, middleName, lastName;
+
 function printFullName() {
-    var firstName = 'Xurxe';
-    var middleName = 'Toivo';
-    var lastName = 'Garcia';
+    firstName = 'Xurxe';
+    middleName = 'Toivo';
+    lastName = 'Garcia';
     console.log(`${firstName} ${middleName} ${lastName}`);
 }
 
@@ -34,6 +36,8 @@ console.log(addTwoNumbers(7, 3));
 
 /* The area of a rectangle is calculated as follows: area = lenght x width.
 Write a function that calculates areaOfRectangle. */
+let height, width;
+
 function areaOfRectangle (height, width) {
     return(height * width);
 }
@@ -54,6 +58,8 @@ console.log(perimeterOfRectangle(2, 3));
 
 /* The volume of a rectangular prism is calculated as follows: volume = lenght x width x height.
 Write a function that calculates volumeOfRectPrism. */
+let depth;
+
 function volumeOrRectPrism(height, width, depth) {
     return(height * width * depth);
 }
@@ -64,6 +70,8 @@ console.log(volumeOrRectPrism(2, 3, 4));
 
 /* The area of a circle is calculated as follows: area = π x r x r.
 Write a function that calculates areaOfCircle */
+let radius;
+
 function areaOfCircle(radius) {
     return(Math.PI * radius ** 2);
 }
@@ -83,6 +91,8 @@ console.log(circumference(1));
 
 /* The density of a substance is calculated as follows: density = mass/volume.
 Write a function that calculates density. */
+let mass, volume;
+
 function density(mass, volume) {
     return(mass / volume);
 }
@@ -94,6 +104,8 @@ console.log(density(6, 3));
 /* The speed of a moving object is calculated by calculating the total distance covered by the object
 divided by the total amount of time elapsed.
 Write a function speed that calculates the speed of a moving object. */
+let distance, time;
+
 function speed(distance, time) {
     return (distance / time);
 }
@@ -104,15 +116,17 @@ console.log(speed(6, 3));
 
 /* The weight of a substance is calculated as follows: weight = mass x gravity.
 Write a function that calculates weight. */
+let gravity;
 function weight(mass, gravity) {
     return (mass * gravity);
 }
 
-console.log(weight(6, 9));
+console.log(weight(6, 9.8));
 
 
 /* Temperature in ºC can be converted to  ºF using this formula: ºF = (ºC x 9/5) + 32.
 Write a function that converts ºC to ºF, convertCelciusToFahrenheit. */
+let celsius;
 function convertCtoF(celcius) {
     return(32 + celcius * 9 / 5)
 }
@@ -122,6 +136,7 @@ console.log(convertCtoF(100));
 
 
 /* Write a function called checkSeason. It takes a month parameter and returns the season: Autumn, Winter, Spring or Summer. */
+let month;
 function checkMonth(month) {
     if (/[Ss]ep[tember]*/.test(month) || /[Oo]ct[ober]*/.test(month) || /[Nn]ov[ember]*/.test(month)) {
         return season = 'fall';
@@ -152,6 +167,8 @@ console.log(checkMonth('jan'));
 Write a function which calculates value of a linear equation, solvLinEquation. */
 
 /* solve for x given parameters a, b and c: x = (b - c ) / a */
+let a, b, c;
+
 function solveLinEquation (a, b, c){
     return((b - c) / a);
 }
@@ -173,8 +190,8 @@ function solveQuadEquation (a, b, c) {
 console.log(solveQuadEquation(1, 2, 1));
 
 function printSolutionsQuadEquation (a, b, c) {
-    var xOne = (-b + (b**2 - 4*a*c)**0.5) / 2*a;
-    var xTwo = (-b - (b**2 - 4*a*c)**0.5) / 2*a;
+    let xOne = (-b + (b**2 - 4*a*c)**0.5) / 2*a;
+    let xTwo = (-b - (b**2 - 4*a*c)**0.5) / 2*a;
     if (xOne !== xOne && xTwo !== xTwo) { /* this checks if xOne o xTwo are NaN, since NaN is the only number not equal to itself */
         console.log(`This quadratic equation has no real solutions.`)
     }
@@ -206,7 +223,7 @@ printSolutionsQuadEquation(2, 4, 1);
 
 /* Declare a function named printArray. It takes array as a parameter and it prints out each value of the array. */
 function printArray (array) {
-    var i = 0;
+    let i = 0;
     while (i < array.length) {
         console.log(array[i]);
         i++;
@@ -220,7 +237,7 @@ printArray(fruits);
 
 /* Declare a function named reverseArray. It takes array as a parameter and it returns the reverse of the array (dont’ use a method). */
 function reverseArray(array) {
-    var i = array.length - 1;
+    let i = array.length - 1;
     while (i >= 0) {
         console.log(array[i]);
         i--;
@@ -233,7 +250,7 @@ reverseArray(fruits);
 
 /* Declare a function named capitalizeArray. It takes array as a parameter and it returns the capitalized array. */ 
 function capitalizeArray(array) {
-    var i = 0;
+    let i = 0;
     while (i < array.length) {
         console.log(array[i].toUpperCase());
         i++;
@@ -267,9 +284,10 @@ removeItem(fruits);
 /* Declare a function named sumOfNumbers. It takes a number parameter and it adds all the numbers in that range. */
 
 /* renamed function as sumNumbers (verb) and variable as sumOfNumbers (noun) */
-var sumOfNumbers = 0;
 function sumNumbers(numOne, numTwo) {
-    for (var i = numOne; i <= numTwo; i++) {
+    let sumOfNumbers = 0;
+
+    for (let i = numOne; i <= numTwo; i++) {
         sumOfNumbers += i;
     }
     console.log(sumOfNumbers);
@@ -282,10 +300,11 @@ sumNumbers(1, 4);
 /* Declare a function named sumOfOdds. It takes a number parameter and it adds all the odd numbers in that range. */
 
 /* renamed function as sumOdds (verb) and variable as sumOfOdds (noun) */
-var sumOfOdds = 0;
 function sumOdds(numOne, numTwo) {
+    let sumOfOdds = 0;
+
     if (numOne % 2 === 1) {
-        for (var i = numOne; i <=numTwo; i += 2) {
+        for (let i = numOne; i <=numTwo; i += 2) {
             sumOfOdds += i;
         }
     }
@@ -303,31 +322,30 @@ console.log(sumOdds (1, 4));
 
 
 /* Declare a function named sumOfEven. It takes a number parameter and it adds all the even numbers in that range. */
-
 /* renamed function as sumEvens (verb) and variable as sumOfEvens (noun) */
-var sumEvens = 0;
-function sumOfEvens(numOne, numTwo) {
+function sumEvens(numOne, numTwo) {
+    let sumOfEvens = 0;
+
     if (numOne % 2 === 0) {
-        for (var i = numOne; i <=numTwo; i += 2) {
-            sumEvens += i;
+        for (let i = numOne; i <=numTwo; i += 2) {
+            sumOfEvens += i;
         }
     }
 
     else {
-        for (var i = numOne + 1; i <= numTwo; i += 2) {
-            sumEvens += i;
+        for (let i = numOne + 1; i <= numTwo; i += 2) {
+            sumOfEvens += i;
         }
     }
-    console.log(sumEvens);
+    console.log(sumOfEvens);
 }
 
-sumOfEvens(1, 4);
+sumEvens(1, 4);
 
 
 
 /* Declare a function named evensAndOdds.
 It takes a number parameter and it counts number of evens and odds in the number. */
-
 function evensAndOdds(number) {
 
     if (Math.abs(number) > 3) {
@@ -356,8 +374,8 @@ evensAndOdds(-4);
 
 
 /* Write a function that takes any number of arguments and returns the sum of the arguments */
-var sum = 0;
 function sumAnyNumbers() {
+    let sum = 0;
     for (var i = 0; i < arguments.length; i++) {
         sum += arguments[i];
     }
@@ -392,15 +410,15 @@ Output:
 console.log(userIdGenerator());
 41XTDbE */
 
-var charset = /[0-9A-Za-z]/
+let charset = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
 
 function userIdGenerator(){
-    var userIdArray = [];
-    for (var i = 0; i < 7; i++) {
-        var index = Math.floor(Math.random() * charset.length);
+    let userIdArray = [];
+    for (i = 0; i < 8; i++) {
+        let index = Math.floor(Math.random() * charset.length);
         userIdArray.push(charset[index]);
     }
-    var userId = userIdArray.join('');
+    let userId = userIdArray.join('');
     return userId;
 }
 
@@ -435,23 +453,23 @@ UbGxOFI7UXSWAyKN
 dIV0SSUTgAdKwStr
 " */
 
-var idLength = prompt('How many characters long should your ID be?');
-var idAmount = prompt('How many IDs do you want to generate?');
+let idLength = prompt('How many characters long should your ID be?');
+let idAmount = prompt('How many IDs do you want to generate?');
 
-function userIdGenerator(){
-    var userIdArray = [];
-    for (var i = 0; i < idLength; i++) {
-        var index = Math.floor(Math.random() * charset.length);
+function userIdGeneratedByUser(){
+    let userIdArray = [];
+    for (i = 0; i < idLength; i++) {
+        let index = Math.floor(Math.random() * charset.length);
         userIdArray.push(charset[index]);
     }
-    var userId = userIdArray.join('');
+    let userId = userIdArray.join('');
     return userId;
 }
 
 function userIdsGeneratedByUser() {
-    var userIdsArray = [];
-    for (var j = 0; j < idAmount; j++) {
-        userIdsArray.push(userIdGenerator());
+    let userIdsArray = [];
+    for (let j = 0; j < idAmount; j++) {
+        userIdsArray.push(userIdGeneratedByUser());
     }
     return userIdsArray;
 }
@@ -532,10 +550,11 @@ console.log(fruits);
 
 
 /* Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number */
-var factor = 1;
 function factorial(number) {
+    let factor = 1;
+
     for (var i = number; i > 0; i--) {
-        factor = factor * i;
+        factor *= i;
     }
     return factor;
 }
@@ -560,9 +579,9 @@ console.log(isEmpty());
 
 
 /* Call your function sum, it takes any number of arguments and it returns the sum. */
-sum = 0;
 function sumNumbers() {
-    for (var i = 0; i < arguments.length; i++) {
+    let sum = 0;
+    for (let i = 0; i < arguments.length; i++) {
         sum += arguments[i];
     }
     return sum;
@@ -575,8 +594,8 @@ console.log(sumNumbers(2, 3, 4));
 /* Write a function called sumOfArrayItems, it takes an array parameter and return the sum of all the items.
 Check if all the array items are number types. If not give return reasonable feedback. */
 function sumOfArrayItems (array){
-    var sum = 0;
-    for (var i = 0; i < array.length; i++) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
         if (typeof array[i] !== "number") {
             console.log("Your array can only contain number values.");
             return sum = null;
@@ -598,8 +617,8 @@ sumOfArrayItems(numberArray);
 /* Write a function called average, it takes an array parameter and returns the average the items.
 Check if all the array items are number types. If not give return reasonable feedback. */
 function meanOfArrayItems (array){
-    var sum = 0;
-    for (var i = 0; i < array.length; i++) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
         if (typeof array[i] !== "number") {
             console.log("Your array can only contain number values.");
             return mean = null;
@@ -639,6 +658,6 @@ function modifyArray (array) {
     }
 }
 
-var itCompanies = ['Facebook', 'Google', 'Microsoft', 'IBM', 'Apple', 'Oracle', 'Amazon'];
+let itCompanies = ['Facebook', 'Google', 'Microsoft', 'IBM', 'Apple', 'Oracle', 'Amazon'];
 
 console.log(modifyArray(itCompanies));

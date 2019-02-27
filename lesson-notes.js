@@ -627,7 +627,7 @@ for(let j = 0; j < 6; j++) {
     console.log(j);
 }
 
-/* console.log(j); */ // this returns undefined, because let has a local scope
+/* console.log(j); // this returns undefined, because let has a local scope */
 
 /* impure function: one that uses global variables declared outside itself */
 /* pure function: one that uses only local variables declared inside itself */
