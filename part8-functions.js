@@ -273,10 +273,11 @@ addItem(fruits, 'durian');
 
 /* Declare a function named removeItem. It returns array after removing an item */
 function removeItem(array) {
-    array.splice(Math.random(0, array.length), 1);
+    array.splice(Math.floor(Math.random()*array.length), 1);
     console.log(array);
 }
 
+fruits = ['apple', 'banana', 'clementine', 'durian', 'elderberry', 'fig', 'grapes', 'honeydew']
 removeItem(fruits);
 
 
@@ -397,7 +398,8 @@ console.log(randomHexaNumberGenerator());
 '#38eeda' */
 
 function randomHexNumberGenerator() {
-    return '#' + Math.random().toString(16).substr(2, 6).toUpperCase();
+    randomHex = '#' + Math.random().toString(16).substr(2, 6).toUpperCase();
+    return randomHex;
 }
 
 console.log(randomHexNumberGenerator());
