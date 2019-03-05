@@ -720,7 +720,7 @@ console.log(squareThree(10));
 
 
 
-/* Objects ***************************************************************************************************** */
+/* Objects ****************************************************************************** */
 
 const person = {
     firstName: 'Xurxe',
@@ -756,3 +756,160 @@ const rectangle = {
 console.log(rectangle);
 console.log(rectangle.getAreaOfRectangle());
 console.log(rectangle.getPerimeterOfRectangle());
+
+
+
+
+
+
+/* TUESDAY 05.MAR.2019 ****************************************************************************************** */
+/* More about loops and array methods: */
+
+
+
+/* LOOP BREAK ************************************************************* */
+/* The break statement stops the execution of a loop when a condition is met. */
+
+for (let i = 0; i < 6; i++) {
+    if (i === 3) {
+        break;
+    }
+    console.log(i);
+}
+
+
+
+/* LOOP CONTINUE ************************************************************* */
+/* The continue statement skips over an iteration of a loop when a condition is met. */
+for (let i = 0; i < 6; i++) {
+    if (i === 3) {
+        continue;
+    }
+    console.log(i);
+}
+
+
+
+/* FOR-IN LOOPS ******************************************************************** */
+/* Loops through the properties of an object, executing a block of code once for each of them. */
+
+const person1 = {
+    name: 'Pekka',
+    age: 200,
+    country: 'Finland',
+};
+
+for (let key in person1) {
+    console.log(key);
+}
+
+
+
+const names = ['Hari', 'Koray', 'Alba'];
+
+for (let i in names) {
+    console.log(names[i]);
+}
+
+
+
+/* FOR-OF LOOPS ******************************************************************** */
+/* Loops through iterable objects, such as string, array, map, set, etc */
+
+const nums = [1, 2, 3, 4, 5, 6, 7, 8];
+
+for (let i of nums) {
+    if (nums[i] % 2 === 0) {
+        console.log(nums[i]);
+    }
+}
+
+
+
+/* FOREACH() METHOD ******************************************************************** */
+/* Executes a provided function once for each array element. */
+
+names.forEach(function(name) {
+    console.log(name);
+});
+
+
+
+names.forEach(function(name, i) {
+    console.log(i + 1, name.toUpperCase());
+});
+
+
+
+names.forEach((name, i) => console.log(i + 1, name.toUpperCase()));
+
+
+/* MAP() METHOD ******************************************************************** */
+/* Executes a provided function once for each array element, and returns results in new array */
+const newNames1 = names.map(function(name) {
+    return name.toUpperCase();
+});
+
+console.log(newNames1);
+
+
+
+const newNames2 = names.map(function(name) {
+    if (name === 'Koray') {
+        return name;
+    }
+    return name.toUpperCase();
+});
+
+console.log(newNames2);
+
+
+
+const numSquare = nums.map(function(num){
+    return num * num;
+} );
+
+console.log(numSquare);
+
+
+
+/* FILTER() METHOD ******************************************************************** */
+/* Check if each array element passes a test (provided as a function), and returns the items that passed the test in a new array */
+
+const numsOverTwo = nums.filter(function(num) {
+    return num > 2;
+});
+
+console.log(numsOverTwo);
+
+
+
+const countries1 = ['Finland', 'Sweden', 'Iceland', 'Norway', 'Scotland', 'Netherlands'];
+
+
+
+const countryContainsLand = countries1.filter(function(country) {
+    return country.includes('land');
+});
+
+console.log(countryContainsLand);
+
+
+
+const countryContainsLand2 = countries1.filter(country => country.includes('land'));
+
+console.log(countryContainsLand2);
+
+
+
+const countryHasSixLetters = countries1.filter(function(country) {
+    return country.length === 6;
+});
+
+console.log(countryHasSixLetters);
+
+
+
+const countryHasSixLetters2 = countries1.filter(country => country.length === 6);
+
+console.log(countryHasSixLetters2);

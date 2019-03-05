@@ -521,7 +521,7 @@ function displayCurrentDateTime() {
     var currentDate = new Date();
     day = "00" + currentDate.getDate();
     day = day.substr(-2);
-    month = "00" + currentDate.getMonth();
+    month = "00" + (currentDate.getMonth() + 1);
     month = month.substr(-2);
     year = "0000" + currentDate.getFullYear();
     year = year.substr(-4);
