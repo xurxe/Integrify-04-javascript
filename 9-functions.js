@@ -1,4 +1,4 @@
-/* FUNCTIONS **************************************************************************************************** */
+/* FUNCTIONS *************************************************************************** */
 
 
 
@@ -124,6 +124,7 @@ function weight(mass, gravity) {
 console.log(weight(6, 9.8));
 
 
+
 /* Temperature in ºC can be converted to  ºF using this formula: ºF = (ºC x 9/5) + 32.
 Write a function that converts ºC to ºF, convertCelciusToFahrenheit. */
 let celsius;
@@ -160,6 +161,32 @@ function checkMonth(month) {
 }
 
 console.log(checkMonth('jan'));
+
+
+
+/* Math.max returns its largest argument. Write a function findMax that takes three arguments and returns their maxiumum with out using Math.max method. */
+function findMax(arg1, arg2, arg3) {
+    let max;
+
+    if (arg1 > arg2) {
+        max = arg1;
+    }
+
+    else if (arg2 > arg1) {
+        max = arg2;
+    }
+
+    if (arg3 > max) {
+        max = arg3;
+        return max;
+    }
+
+    else if (max > arg3) {
+        return max
+    }
+}
+
+console.log(findMax(1, 2, 3));
 
 
 
@@ -386,6 +413,60 @@ function sumAnyNumbers() {
 console.log(sumAnyNumbers(2, 3, 4));
 
 
+/* Write a function that generates a randomUserIp. */
+function randomUserIp() {
+    array = [];
+
+    for (i = 0; i < 3; i++) {
+        let number = Math.floor(Math.random() * 10);
+        array.push(number);
+    }
+
+    array.push('.');
+
+    for (i = 0; i < 2; i++) {
+        let number = Math.floor(Math.random() * 10);
+        array.push(number);
+    }
+    
+    array.push('.');
+
+    for (i = 0; i < 3; i++) {
+        let number = Math.floor(Math.random() * 10);
+        array.push(number);
+    }
+    
+    array.push('.');
+
+    let number = Math.floor(Math.random() * 10);
+    array.push(number);
+
+    userIp = array.join('');
+    
+    return userIp
+}
+
+console.log(randomUserIp());
+
+
+/* Write a function that generates a randomMacAddress */
+function randomMacAddress() {
+    array = [];
+    for (i = 0; i < 5; i++) {
+        number = Math.random().toString(16).substr(2, 2).toUpperCase();
+        array.push(number);
+        array.push(':');
+    }
+    number = Math.random().toString(16).substr(2, 2).toUpperCase();
+    array.push(number);
+
+    macAddress = array.join('');
+    return macAddress;
+}
+
+console.log(randomMacAddress());
+
+
 
 /* Declare a function named randomHexaNumberGenerator.
 When this function is called it generates and returns a random hexadecimal number.
@@ -495,48 +576,7 @@ console.log(rgbColorGenerator());
 
 
 
-/* Write a function named displayDateTime that display the date in this format: 28/08/2018 04:08 */
-function displayDateTime(day, month, year, hour, minute) {
-    day = "00" + day;
-    day = day.substr(-2); /* this ensures that leading zeroes are not removed */
-    month = "00" + month;
-    month = month.substr(-2);
-    year = "0000" + year;
-    year = year.substr(-4);
-    hour = "00" + hour;
-    hour = hour.substr(-2);
-    minute = "00" + minute;
-    minute = minute.substr(-2);
-    console.log(`${day}/${month}/${year} ${hour}:${minute}`)
-}
-
-displayDateTime(18, 1, 1990, 18, 00);
-
-
-
-/* Use the new Date() object to get month, date, year, hour and minute. Output:
-28/08/2018 04:08 */
-
-function displayCurrentDateTime() {
-    var currentDate = new Date();
-    day = "00" + currentDate.getDate();
-    day = day.substr(-2);
-    month = "00" + (currentDate.getMonth() + 1);
-    month = month.substr(-2);
-    year = "0000" + currentDate.getFullYear();
-    year = year.substr(-4);
-    hour = "00" + currentDate.getHours();
-    hour = hour.substr(-2);
-    minute = "00" + currentDate.getMinutes();
-    minute = minute.substr(-2);
-    console.log(`${day}/${month}/${year} ${hour}:${minute}`)
-}
-
-displayCurrentDateTime();
-
-
-
-/* Call your function shuffleArray, it takes an array as a parameter and it returns a shuffled array */
+/* Call your function shuffleArray; it takes an array as a parameter and it returns a shuffled array */
 function shuffleArray(array) {
     for (var i = array.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
@@ -551,7 +591,7 @@ console.log(fruits);
 
 
 
-/* Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number */
+/* Call your function factorial; it takes a whole number as a parameter and it return a factorial of the number */
 function factorial(number) {
     let factor = 1;
 
@@ -565,7 +605,7 @@ console.log(factorial(5));
 
 
 
-/* Call your function isEmpty, it takes a parameter and it checks if it is empty or not. */
+/* Call your function isEmpty; it takes a parameter and it checks if it is empty or not. */
 function isEmpty(value) {
     if (value === undefined || value === null) {
         return true;
@@ -580,7 +620,7 @@ console.log(isEmpty());
 
 
 
-/* Call your function sum, it takes any number of arguments and it returns the sum. */
+/* Call your function sum; it takes any number of arguments and it returns the sum. */
 function sumNumbers() {
     let sum = 0;
     for (let i = 0; i < arguments.length; i++) {
@@ -593,7 +633,7 @@ console.log(sumNumbers(2, 3, 4));
 
 
 
-/* Write a function called sumOfArrayItems, it takes an array parameter and return the sum of all the items.
+/* Write a function called sumOfArrayItems; it takes an array parameter and return the sum of all the items.
 Check if all the array items are number types. If not give return reasonable feedback. */
 function sumOfArrayItems (array){
     let sum = 0;
@@ -616,7 +656,7 @@ sumOfArrayItems(numberArray);
 
 
 
-/* Write a function called average, it takes an array parameter and returns the average the items.
+/* Write a function called average; it takes an array parameter and returns the average the items.
 Check if all the array items are number types. If not give return reasonable feedback. */
 function meanOfArrayItems (array){
     let sum = 0;
@@ -663,3 +703,92 @@ function modifyArray (array) {
 let itCompanies = ['Facebook', 'Google', 'Microsoft', 'IBM', 'Apple', 'Oracle', 'Amazon'];
 
 console.log(modifyArray(itCompanies));
+
+
+
+/* Write a function called isPrime, which checks if a number is prime. */
+function isPrime(number) {
+    if (number <= 0 || number % 1 != 0) {
+        return false;
+    }
+
+    for (i = number - 1; i > 1; i--) {
+        if (number % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(isPrime(-1));
+console.log(isPrime(1.5));
+console.log(isPrime(1));
+console.log(isPrime(2));
+console.log(isPrime(7));
+console.log(isPrime(8));
+
+
+
+/* Write a functions which checks if all items are unique in the array. */
+function checkUniqueness(array) {
+
+    // loop through array
+    for (let i = 0; i < array.length; i++) {
+
+        // if the index of the first and last ocurrence of a value are not the same, the items are not unique
+        if (array.indexOf(array[i]) !== array.lastIndexOf(array[i])) {
+            return uniqueness = false;
+        }
+    }
+
+    // if the loop ran its course without returning false, then the items are unique
+    return uniqueness = true;
+}
+
+const arrOne = [1, 4, 4, 2, 3];
+const arrTwo = [1, 4, 6, 2, 3];
+console.log(checkUniqueness(arrOne));
+console.log(checkUniqueness(arrTwo));
+
+
+
+/* Write a function that checks if all the items of the array are the same data type. */
+function checkIfSameDataType(array) {
+
+    // loop through array items
+    for (let i = 0; i < array.length; i++) {
+
+        // for each array item i, compare its type with the type of the items that come after (to avoid double comparisons)
+        for (let j = i + 1; j < array.length; j++) {
+
+            // if at any point the data types are different, then the data is not all the same type
+            if (typeof array[i] != typeof array[j]) {
+                return false;
+            }
+        }
+    }
+
+    // if all the loops ran their course without returning false, then the items are unique
+    return true;
+}
+const arrThree = [1, 4, 4, 2, 'cat'];
+console.log(checkIfSameDataType(arrOne));
+console.log(checkIfSameDataType(arrThree));
+
+
+
+/* Write a function that returns an array of seven random numbers in a range of 0-9. All the numbers must be unique.
+sevenRandomNumbers()[(1, 4, 5, 7, 9, 8, 0)]; */
+
+function sevenRandomNumbers() {
+    digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    array = [];
+    for (i = 0; i < 7; i++) {
+        let index = Math.floor(Math.random() * digits.length);
+        let number = digits.splice(index, 1)[0];
+        array.push(number);
+    }
+    return array;
+}
+
+console.log(sevenRandomNumbers());

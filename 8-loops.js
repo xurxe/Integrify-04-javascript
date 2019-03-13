@@ -1,4 +1,5 @@
-/* LOOPS ******************************************************************************************************** */
+/* LOOPS ****************************************************************** */
+
 let i;
 /* Iterate 0 to 10 using the for-loop, and then do the same using the while- and do while-loops. */
 for (i = 0; i <= 10; i++) {
@@ -38,10 +39,19 @@ i--
 
 
 
-/* Iterate the itCompanies array from earlier using a for-loop and print out the items. */
-itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
-for (i = 0; i < itCompanies.length; i++) {
-    console.log(itCompanies[i]);
+/* Write a loop that makes seven calls to console.log to output the following triangle: */
+for (i = 1; i < 8; i++) {
+    let character = '#';
+    console.log(character.repeat(i));
+}
+
+
+
+/* Iterate the array, ['HTML', 'CSS', 'JavaScript'] using a for loop and print out the items. */
+
+skills = ['HTML', 'CSS', 'JavaScript'];
+for (i = 0; i < skills.length; i++) {
+    console.log(skills[i]);
 }
 
 

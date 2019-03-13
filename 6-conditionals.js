@@ -1,4 +1,4 @@
-/* CONDITIONALS ************************************************************************************************* */
+/* CONDITIONALS *********************************************************** */
 
 /* Get user input using the prompt(“Enter your age:”).
 If the user is 18 or older, give feedback: "You are old enough to drive"

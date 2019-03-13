@@ -1,4 +1,5 @@
-/* DATA TYPES *************************************************************************************************** */
+/* DATA TYPES ************************************************************* */
+
 /* Declare variables and assign string, boolean, undefined and null data types */
 let firstName = 'Xurxe Toivo';
 let lastName = 'Garcia';
@@ -14,25 +15,7 @@ let hatesChocolate = null;
 
 
 
-/* The JavaScript typeof operator can be used to check different data types.
-Check the data type of each variable from question number 1. */
-console.log(typeof firstName);
-console.log(typeof lastName);
-console.log(typeof maritalStatus);
-console.log(typeof nation);
-console.log(typeof age);
-console.log(typeof myAge);
-console.log(typeof yourAge);
-console.log(typeof favoriteFood);
-console.log(typeof likesChocolate);
-console.log(typeof dislikesChocolate);
-console.log(typeof hatesChocolate);
-
-
-
-/* STRINGS ****************************************************************************************************** */
-
-
+/* STRINGS **************************************************************** */
 
 /* Declare a variable named company and assign it to an initial value "Coding Academy”. */
 let company = 'Coding Academy';
@@ -224,9 +207,7 @@ console.log(income);
 
 
 
-/* BOOLEANS ***************************************************************************************************** */
-
-
+/* BOOLEANS ***************************************************************** */
 
 /*  Write three JavaScript statements that provide a truthy value. */
 let happy = true;
@@ -255,3 +236,21 @@ console.log(4 !== 4); /* false */
 console.log(4 != '4'); /* false */
 console.log(4 == '4'); /* true */
 console.log(4 === '4'); /* false */
+
+
+
+/* TYPEOF OPERATOR ********************************************************* */
+
+/* The JavaScript typeof operator can be used to check different data types.
+Check the data type of each variable from question number 1. */
+console.log(typeof firstName);
+console.log(typeof lastName);
+console.log(typeof maritalStatus);
+console.log(typeof nation);
+console.log(typeof age);
+console.log(typeof myAge);
+console.log(typeof yourAge);
+console.log(typeof favoriteFood);
+console.log(typeof likesChocolate);
+console.log(typeof dislikesChocolate);
+console.log(typeof hatesChocolate);

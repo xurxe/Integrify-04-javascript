@@ -1,6 +1,4 @@
-/* ARITHMETIC OPERATORS ***************************************************************************************** */
-
-
+/* ARITHMETIC OPERATORS *************************************************** */
 
 /* JavaScript arithmetic operators are:
 addition(+), subtraction(-), multiplication(*), division(/), modulus(%), increment(++) and decrement(--). */
@@ -46,7 +44,8 @@ console.log(unaryPlus);
 
 
 
-/* LOGICAL OPERATORS ******************************************************************************************** */
+/* LOGICAL OPERATORS ****************************************************** */
+
 /* &&, || and ! are JavaScript logical operators. Of the statements below, which are true and which are false ? */
 console.log(4 > 3 && 10 < 12); /* true */
 console.log(4 > 3 && 10 > 12); /* false */
@@ -61,7 +60,8 @@ console.log(!(4 === '4')); /* true */
 
 
 
-/* COMPARISON OPERATORS ***************************************************************************************** */
+/* COMPARISON OPERATORS ***************************************************** */
+
 /* 	Use all the following comparison operators to compare the following values: >, < >=, <=, !=, !==,===. 
 Which are true or which are false ? */
 console.log(4 > 3); /* true */

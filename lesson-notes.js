@@ -243,10 +243,10 @@ var logicalAND = d || (a > 1) || (b > 1); /* finds a truthy value, returns that 
 
 
 /* logical NOT converts ONE value to a boolean, and returns the opposite of that boolean. */
-var logicalNOT = true; /* returns false */
-var logicalNOT = false; 
+var logicalNOT = !true; /* returns false */
+var logicalNOT = !false; 
 var logicalNOT = !0; /* 0 is falsy, so it returns true */
-var logicalNOT = !d /* 'cat' is truthy, so it returns false */
+var logicalNOT = !'cat'; /* 'cat' is truthy, so it returns false */
 
 
 
@@ -818,9 +818,9 @@ for (let i in names) {
 
 const nums = [1, 2, 3, 4, 5, 6, 7, 8];
 
-for (let i of nums) {
-    if (nums[i] % 2 === 0) {
-        console.log(nums[i]);
+for (let num of nums) {
+    if (num % 2 === 0) {
+        console.log(num);
     }
 }
 
@@ -913,3 +913,11 @@ console.log(countryHasSixLetters);
 const countryHasSixLetters2 = countries1.filter(country => country.length === 6);
 
 console.log(countryHasSixLetters2);
+
+
+
+
+
+
+
+
