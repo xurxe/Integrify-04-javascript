@@ -13,6 +13,7 @@ let fruits = ['apple', 'banana', 'clementine', 'durian', 'elderberry', 'fig', 'g
 console.log(fruits);
 
 
+
 /* Find the length of your array */
 console.log(fruits.length);
 
@@ -129,16 +130,26 @@ console.log(itCompanies);
 
 
 
-/* Sort the array using sort() method */
+/* Sort the array using the sort() method */
 itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
 let sortedItCompanies = itCompanies.sort();
 console.log(sortedItCompanies);
 
 
 
-/* Reverse the array using reverse() method */
-let reversedItCompanies = itCompanies.reverse();
+/* Reverse the array without the reverse() method */
+let reversedItCompanies = [];
+
+for (let i = itCompanies.length - 1; i >= 0; i--) {
+    reversedItCompanies.push(itCompanies[i]);
+}
 console.log(reversedItCompanies);
+
+
+
+/* Reverse the array using the reverse() method */
+let reversedItCompanies2 = itCompanies.reverse();
+console.log(reversedItCompanies2);
 
 
 

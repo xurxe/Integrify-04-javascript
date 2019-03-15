@@ -913,11 +913,3 @@ console.log(countryHasSixLetters);
 const countryHasSixLetters2 = countries1.filter(country => country.length === 6);
 
 console.log(countryHasSixLetters2);
-
-
-
-
-
-
-
-
